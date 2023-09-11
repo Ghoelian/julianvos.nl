@@ -1,0 +1,11 @@
+.link {
+    color: white;
+}
+
+.link:visited {
+    color: lightgrey;
+}
+
+.link:hover {
+    color: darkgrey;
+}
