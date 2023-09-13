@@ -3,12 +3,13 @@
 import { Box, IconButton, ListItemIcon, Menu, MenuItem, Typography } from '@mui/material';
 import { Menu as MenuIcon } from '@mui/icons-material';
 import React from 'react';
-import { useRouter } from 'next/navigation';
+import useSections from '@/app/hooks/useSections';
+import { Sections } from '@/app/types/sections';
 
 export default function SmallNavMenu({ pages }: { pages: IPage[] }) {
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
 
-    const router = useRouter();
+    const { aboutMeRef, portfolioRef, experienceRef, contactRef } = useSections() as Sections;
 
     const handleNavOpen = (event: React.MouseEvent<HTMLElement>) => {
         setAnchorElNav(event.currentTarget);
@@ -18,10 +19,37 @@ export default function SmallNavMenu({ pages }: { pages: IPage[] }) {
         setAnchorElNav(null);
     };
 
-    const handleNavClick = (path: string) => {
-        router.replace(path);
+    const handleNavClick = (section: string) => {
+        switch (section.toLowerCase()) {
+            case 'about':
+                scroll(aboutMeRef);
+                break;
+            case 'portfolio':
+                scroll(portfolioRef);
+                break;
+            case 'experience':
+                scroll(experienceRef);
+                break;
+            case 'contact':
+                scroll(contactRef);
+                break;
+        }
 
         handleNavClose();
+    };
+
+    const scroll = (ref: React.MutableRefObject<HTMLElement | undefined>) => {
+        const offset = 70;
+        const elementPos = ref.current?.getBoundingClientRect().top;
+
+        if (elementPos === undefined) return;
+
+        const offsetPos = elementPos + window.scrollY - offset;
+
+        window.scrollTo({
+            top: offsetPos,
+            behavior: 'smooth'
+        });
     };
 
     return (
@@ -56,7 +84,7 @@ export default function SmallNavMenu({ pages }: { pages: IPage[] }) {
                     }}
                 >
                     {pages.map((page) => (
-                        <MenuItem key={page.name} onClick={() => handleNavClick(page.path)}>
+                        <MenuItem key={page.name} onClick={() => handleNavClick(page.name)}>
                             <ListItemIcon>{page.icon}</ListItemIcon>
                             <Typography textAlign="center">{page.name}</Typography>
                         </MenuItem>

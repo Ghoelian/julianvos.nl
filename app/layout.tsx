@@ -3,7 +3,8 @@ import React from 'react';
 import ThemeRegistry from '@/app/ThemeRegistry';
 import MenuBar from '@/app/layout/menu-bar';
 import { Box, Toolbar } from '@mui/material';
-import Footer from "@/app/components/footer";
+import Footer from '@/app/components/footer';
+import { SectionProvider } from '@/app/hooks/useSections';
 
 export const metadata: Metadata = {
     title: 'julianvos.nl',
@@ -33,21 +34,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <body>
                 <ThemeRegistry options={{ key: 'mui' }}>
                     <Box sx={{ display: 'flex', height: '100%' }}>
-                        <MenuBar />
+                        <SectionProvider>
+                            <MenuBar />
 
-                        <Box component="main" sx={{ flexGrow: 1, p: 2 }}>
-                            <Toolbar />
-                            <main
-                                style={{
-                                    maxWidth: 900,
-                                    alignItems: 'center',
-                                    margin: '0 auto'
-                                }}
-                            >
-                                {children}
-                                <Footer />
-                            </main>
-                        </Box>
+                            <Box component="main" sx={{ flexGrow: 1, p: 2 }}>
+                                <Toolbar />
+                                <main
+                                    style={{
+                                        maxWidth: 900,
+                                        alignItems: 'center',
+                                        margin: '0 auto'
+                                    }}
+                                >
+                                    {children}
+                                    <Footer />
+                                </main>
+                            </Box>
+                        </SectionProvider>
                     </Box>
                 </ThemeRegistry>
             </body>

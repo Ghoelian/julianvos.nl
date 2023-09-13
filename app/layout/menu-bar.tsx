@@ -8,29 +8,20 @@ import { Apps, Email, Home, LinearScale, Person } from '@mui/icons-material';
 
 const pages: IPage[] = [
     {
-        name: 'Home',
-        icon: <Home />,
-        path: '/#home'
-    },
-    {
         name: 'About',
-        icon: <Person />,
-        path: '/#about'
+        icon: <Person />
     },
     {
         name: 'Portfolio',
-        icon: <Apps />,
-        path: '/#portfolio'
+        icon: <Apps />
     },
     {
         name: 'Experience',
-        icon: <LinearScale />,
-        path: '/#experience'
+        icon: <LinearScale />
     },
     {
         name: 'Contact',
-        icon: <Email />,
-        path: '/#contact'
+        icon: <Email />
     }
 ];
 
