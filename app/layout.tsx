@@ -13,7 +13,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
     return (
-        <html lang="en">
+        <html
+            style={{
+                position: 'relative',
+                minHeight: '100%'
+            }}
+            lang="en"
+        >
             <head>
                 <meta charSet="utf-8" />
 
@@ -31,7 +37,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
                 <title>julianvos.nl</title>
             </head>
-            <body>
+            <body
+                style={{
+                    margin: '0 0 155px',
+                    padding: '25px'
+                }}
+            >
                 <ThemeRegistry options={{ key: 'mui' }}>
                     <Box sx={{ display: 'flex', height: '100%' }}>
                         <SectionProvider>
