@@ -3,13 +3,13 @@
 import { Box, IconButton, ListItemIcon, Menu, MenuItem, Typography } from '@mui/material';
 import { Menu as MenuIcon } from '@mui/icons-material';
 import React from 'react';
-import useSections from '@/app/hooks/useSections';
-import { Sections } from '@/app/types/sections';
+import { usePathname, useRouter } from 'next/navigation';
 
 export default function SmallNavMenu({ pages }: { pages: IPage[] }) {
     const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(null);
 
-    const { aboutMeRef, portfolioRef, experienceRef, contactRef } = useSections() as Sections;
+    const router = useRouter();
+    const pathname = usePathname();
 
     const handleNavOpen = (event: React.MouseEvent<HTMLElement>) => {
         setAnchorElNav(event.currentTarget);
@@ -20,36 +20,15 @@ export default function SmallNavMenu({ pages }: { pages: IPage[] }) {
     };
 
     const handleNavClick = (section: string) => {
-        switch (section.toLowerCase()) {
-            case 'about':
-                scroll(aboutMeRef);
-                break;
-            case 'portfolio':
-                scroll(portfolioRef);
-                break;
-            case 'experience':
-                scroll(experienceRef);
-                break;
-            case 'contact':
-                scroll(contactRef);
-                break;
-        }
-
         handleNavClose();
-    };
 
-    const scroll = (ref: React.MutableRefObject<HTMLElement | undefined>) => {
-        const offset = 70;
-        const elementPos = ref.current?.getBoundingClientRect().top;
-
-        if (elementPos === undefined) return;
-
-        const offsetPos = elementPos + window.scrollY - offset;
-
-        window.scrollTo({
-            top: offsetPos,
-            behavior: 'smooth'
-        });
+        if (pathname === '/') {
+            router.replace(`/?s=${section.toLowerCase()}`, {
+                scroll: false
+            });
+        } else {
+            router.push(`/?s=${section.toLowerCase()}`);
+        }
     };
 
     return (
