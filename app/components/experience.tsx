@@ -123,7 +123,6 @@ export default function Experience() {
 
     return (
         <>
-            <Typography sx={{ textAlign: 'center' }}>This thing scrolls to the left btw, haven&apos;t quite finished it yet :)</Typography>
             <div
                 style={{
                     position: 'absolute',
