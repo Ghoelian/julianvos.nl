@@ -2,7 +2,8 @@
 
 import { DateTime } from 'luxon';
 import { useEffect, useMemo, useRef, useState } from 'react';
-import { Card, CardContent } from '@mui/material';
+import { Card, CardContent, IconButton, Typography } from '@mui/material';
+import { ArrowBack, ArrowForward } from '@mui/icons-material';
 
 type ITimelineItem = {
     description: string;
@@ -76,8 +77,77 @@ export default function Experience() {
         );
     }, [experienceRef, items, bounds]);
 
+    const smoothScroll = (pos: number, time: number) => {
+        if (experienceRef.current === null) return;
+
+        const currentPos = experienceRef.current.scrollLeft;
+        let start: number | null = null;
+
+        if (time === null) time = 500;
+
+        pos = +pos;
+        time = +time;
+
+        window.requestAnimationFrame(function step(currentTime) {
+            if (experienceRef.current === null) return;
+
+            start = !start ? currentTime : start;
+
+            const progress = currentTime - start;
+
+            if (currentPos < pos) {
+                experienceRef.current.scrollTo({ left: ((pos - currentPos) * progress) / time + currentPos });
+            } else {
+                experienceRef.current.scrollTo({ left: currentPos - ((currentPos - pos) * progress) / time });
+            }
+
+            if (progress < time) {
+                window.requestAnimationFrame(step);
+            } else {
+                experienceRef.current.scrollTo({ left: pos });
+            }
+        });
+    };
+
+    const handleClick = (dir: number) => {
+        if (experienceRef.current === null) return;
+
+        // Left
+        if (dir === 0) {
+            smoothScroll(experienceRef.current.scrollLeft - (window.innerWidth - 200), 250);
+        } // Right
+        else {
+            smoothScroll(experienceRef.current.scrollLeft + (window.innerWidth - 200), 250);
+        }
+    };
+
     return (
         <>
+            <Typography sx={{ textAlign: 'center' }}>This thing scrolls to the left btw, haven&apos;t quite finished it yet :)</Typography>
+            <div
+                style={{
+                    position: 'absolute',
+                    left: 200,
+                    zIndex: 100,
+                    marginTop: 150
+                }}
+            >
+                <IconButton onClick={() => handleClick(0)} sx={{ backgroundColor: 'grey', color: 'black' }}>
+                    <ArrowBack />
+                </IconButton>
+            </div>
+            <div
+                style={{
+                    position: 'absolute',
+                    right: 200,
+                    zIndex: 100,
+                    marginTop: 150
+                }}
+            >
+                <IconButton onClick={() => handleClick(1)} sx={{ backgroundColor: 'grey', color: 'black' }}>
+                    <ArrowForward />
+                </IconButton>
+            </div>
             <div
                 style={{
                     overflow: 'scroll',
