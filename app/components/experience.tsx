@@ -1,8 +1,8 @@
 'use client';
 
 import { DateTime } from 'luxon';
-import { useEffect, useMemo, useState } from 'react';
-import { Card, CardContent, CardHeader } from '@mui/material';
+import { useEffect, useMemo, useRef, useState } from 'react';
+import { Card, CardContent } from '@mui/material';
 
 type ITimelineItem = {
     description: string;
@@ -14,6 +14,8 @@ const mapRange = (number: number, inMin: number, inMax: number, outMin: number, 
 };
 
 export default function Experience() {
+    const experienceRef = useRef<HTMLDivElement>(null);
+
     const [bounds, setBounds] = useState<number[]>();
 
     const items = useMemo<ITimelineItem[]>(
@@ -62,6 +64,18 @@ export default function Experience() {
         setBounds([items[0].timestamp.toSeconds(), items[items.length - 1].timestamp.toSeconds()]);
     }, [items]);
 
+    useEffect(() => {
+        if (experienceRef === null || experienceRef.current === null || bounds === undefined) return;
+
+        experienceRef.current.scrollLeft = mapRange(
+            items[items.length - 1].timestamp.toSeconds(),
+            bounds[0],
+            bounds[1],
+            0,
+            items.length * 500
+        );
+    }, [experienceRef, items, bounds]);
+
     return (
         <>
             <div
@@ -71,8 +85,10 @@ export default function Experience() {
                     display: 'flex',
                     flexDirection: 'column',
                     height: 400,
-                    textAlign: 'center'
+                    textAlign: 'center',
+                    marginTop: '1rem'
                 }}
+                ref={experienceRef}
             >
                 {bounds?.length === 2 && (
                     <>
