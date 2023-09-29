@@ -17,8 +17,9 @@ export default function Contact() {
         fetch(`/api/contactInfo?recaptcha-token=${val}`).then(async (result) => {
             if (result.ok) {
                 setContactInfo(await result.json());
-                setRecaptchaValidated(true);
             }
+
+            setRecaptchaValidated(true);
         });
     };
 
@@ -26,7 +27,7 @@ export default function Contact() {
         <Box sx={{ display: 'flex', flexDirection: 'column', textAlign: 'center' }}>
             {recaptchaValidated ? (
                 <>
-                    {contactInfo && (
+                    {contactInfo ? (
                         <>
                             <p>
                                 <LocationOn sx={{ verticalAlign: 'middle' }} /> {contactInfo.location}
@@ -44,6 +45,8 @@ export default function Contact() {
                                 </Link>
                             </p>
                         </>
+                    ) : (
+                        <>Not today, robots!</>
                     )}
                 </>
             ) : (

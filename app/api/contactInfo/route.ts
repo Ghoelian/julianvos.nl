@@ -18,7 +18,17 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
 
     const { success } = await response.json();
 
-    if (!success) return NextResponse.next({ status: 403 });
+    if (!success)
+        return NextResponse.json(
+            {
+                location: 'Not today,',
+                phone: 'robots!',
+                email: ''
+            },
+            {
+                status: 403
+            }
+        );
 
     return NextResponse.json({
         location: 'Emmen, Drenthe, NL',

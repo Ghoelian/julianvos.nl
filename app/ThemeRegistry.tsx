@@ -7,7 +7,6 @@ import { CacheProvider } from '@emotion/react';
 import { ThemeProvider } from '@mui/material/styles';
 import { CssBaseline } from '@mui/material';
 import { theme } from './theme';
-import MenuBar from '@/app/layout/menu-bar';
 
 export default function ThemeRegistry(props: { options: Options; children: React.ReactNode }) {
     const { options, children } = props;
