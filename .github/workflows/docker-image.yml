@@ -17,4 +17,4 @@ jobs:
     - name: Build
       run: docker build . --file Dockerfile --tag julianvos-website:$(date +%s)
     - name: Push
-      run: docker push ghcr.io/Ghoelian/julianvos-website:latest
+      run: docker push ghcr.io/ghoelian/julianvos-website:latest
