@@ -1,3 +1,7 @@
+LABEL org.opencontainers.image.source=https://github.com/Ghoelian/julianvos.nl
+LABEL org.opencontainers.image.description="My personal website"
+LABEL org.opencontainers.image.licenses=GPLv3
+
 FROM node:18-alpine AS base
 
 # Install dependencies only when needed
