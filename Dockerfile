@@ -1,7 +1,3 @@
-LABEL org.opencontainers.image.source=https://github.com/Ghoelian/julianvos.nl
-LABEL org.opencontainers.image.description="My personal website"
-LABEL org.opencontainers.image.licenses=GPLv3
-
 FROM node:18-alpine AS base
 
 # Install dependencies only when needed
@@ -57,6 +53,11 @@ RUN chown nextjs:nodejs .next
 # https://nextjs.org/docs/advanced-features/output-file-tracing
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+
+LABEL org.opencontainers.image.source=https://github.com/Ghoelian/julianvos.nl
+LABEL org.opencontainers.image.description="My personal website"
+LABEL org.opencontainers.image.licenses=GPLv3
+LABEL org.opencontainers.image.authors="post@julianvos.nl"
 
 USER nextjs
 
