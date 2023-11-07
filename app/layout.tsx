@@ -34,6 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <meta name="msapplication-TileColor" content="#da532c" />
                 <meta name="msapplication-config" content="/favicon/browserconfig.xml?v=1694452827" />
                 <meta name="theme-color" content="#da532c" />
+                <script type="text/javascript" src="/__ENV.js" />
 
                 <title>julianvos.nl</title>
             </head>

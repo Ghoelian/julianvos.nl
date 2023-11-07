@@ -1,8 +1,9 @@
+import env from '@beam-australia/react-env';
 import { NextRequest, NextResponse } from 'next/server';
 
 export async function GET(request: NextRequest): Promise<NextResponse> {
     const recaptchaToken = request.nextUrl.searchParams.get('recaptcha-token');
-    const recaptchaSecret = process.env.RECAPTCHA_SECRET;
+    const recaptchaSecret = env('RECAPTCHA_SECRET');
 
     if (recaptchaToken === null || recaptchaSecret === undefined) return NextResponse.next({ status: 400 });
 
