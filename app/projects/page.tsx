@@ -1,7 +1,8 @@
 import { Project } from "@/common/types/project";
-import PongCover from "@/common/assets/portfolio/pong.webp";
-import LyricsCover from "@/common/assets/portfolio/lyrics.webp";
-import SnakeCover from "@/common/assets/portfolio/snake.webp";
+import PongCover from "@/common/assets/projects/pong.webp";
+import LyricsCover from "@/common/assets/projects/lyrics.webp";
+import SnakeCover from "@/common/assets/projects/snake.webp";
+import PaytreePosCover from "@/common/assets/projects/paytree-pos.png";
 import ProjectTile from "@/app/projects/project-tile";
 import { Skeleton } from "@mui/material";
 
@@ -28,7 +29,14 @@ const projects: Project[] = [
     path: "/projects/snake",
   },
   {
-    coverComponent: <Skeleton variant="rectangular" width={256} height={256} />,
+    coverComponent: (
+      <Skeleton
+        variant="rectangular"
+        animation={false}
+        width={256}
+        height={256}
+      />
+    ),
     title: "Paytree dashboard",
     description:
       "Dashboard where customers can create products, add them to cash registers, and view their event's statistics.",
@@ -36,7 +44,7 @@ const projects: Project[] = [
     path: "/projects/paytree/dashboard",
   },
   {
-    coverComponent: <Skeleton variant="rectangular" width={256} height={256} />,
+    coverImage: PaytreePosCover,
     title: "Paytree POS",
     description:
       "Android POS app where customers can add products to a cart, and initiate payments on a variety of payments devices.",
@@ -44,7 +52,14 @@ const projects: Project[] = [
     path: "/projects/paytree/pos",
   },
   {
-    coverComponent: <Skeleton variant="rectangular" width={256} height={256} />,
+    coverComponent: (
+      <Skeleton
+        variant="rectangular"
+        animation={false}
+        width={256}
+        height={256}
+      />
+    ),
     title: "Paytree API",
     description: "API that powers the other Paytree projects.",
     tags: ["Kotlin", "Ktor", "Exposed", "PostgreSQL"],
