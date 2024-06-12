@@ -44,7 +44,24 @@ export default function RootLayout({
                     </Box>
 
                     <main>
-                      <Box sx={{ p: 4 }}>{children}</Box>
+                      <Box
+                        sx={{
+                          p: 4,
+                          display: "flex",
+                          flexDirection: "column",
+                          alignItems: "center",
+                          justifyItems: "center",
+                          justifyContent: "center",
+                        }}
+                      >
+                        <Box
+                          sx={{
+                            maxWidth: 850,
+                          }}
+                        >
+                          {children}
+                        </Box>
+                      </Box>
                     </main>
                   </Box>
                 </Box>
