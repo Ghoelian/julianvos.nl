@@ -16,6 +16,7 @@ import { MdMenu } from "react-icons/md";
 import { navPages } from "@/common/pages";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { Page } from "@/common/types/page";
 
 const AppBar = () => {
   const router = useRouter();
@@ -78,7 +79,7 @@ const AppBar = () => {
                 },
               }}
             >
-              {navPages.map((page, idx) => (
+              {navPages.map((page: Page, idx: number) => (
                 <MenuItem
                   key={`nav-menu-${idx}`}
                   onClick={() => setAnchorElNav(null)}
@@ -107,7 +108,7 @@ const AppBar = () => {
 
           {/*Menu items*/}
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {navPages.map((page, idx) => (
+            {navPages.map((page: Page, idx: number) => (
               <Button
                 key={`nav-appbar-${idx}`}
                 sx={{ m: 2, display: "block", textTransform: "lowercase" }}
