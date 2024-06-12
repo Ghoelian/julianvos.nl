@@ -9,6 +9,7 @@ const ProjectTile = ({ project }: { project: Project }) => {
       sx={{
         display: "flex",
         m: 2,
+        height: 256,
       }}
     >
       <CardMedia component="span">
@@ -16,6 +17,9 @@ const ProjectTile = ({ project }: { project: Project }) => {
           <Image
             src={project.coverImage}
             alt={project.title}
+            style={{
+              objectFit: "contain",
+            }}
             width={256}
             height={256}
             priority
@@ -35,11 +39,11 @@ const ProjectTile = ({ project }: { project: Project }) => {
       >
         <Typography component="div" variant="h5">
           {project.title}
-
+          <br />
           {project.tags.map((tag, idx) => (
             <Chip
               key={`project-${project.title}-tags-${idx}`}
-              sx={{ mx: 1 }}
+              sx={{ mr: 2 }}
               label={tag}
               size="small"
               variant="outlined"
