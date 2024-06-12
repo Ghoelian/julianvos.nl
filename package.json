@@ -1,5 +1,5 @@
 {
-  "name": "julianvos-next",
+  "name": "julianvos-next-test",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -15,10 +15,11 @@
     "@mui/material": "^5.15.20",
     "@mui/material-nextjs": "^5.15.11",
     "luxon": "^3.4.4",
-    "next": "14.2.1",
+    "next": "14.2.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-icons": "^5.2.1"
+    "react-icons": "^5.2.1",
+    "sharp": "^0.33.4"
   },
   "devDependencies": {
     "@types/luxon": "^3.4.2",
@@ -26,9 +27,9 @@
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "eslint": "^8.57.0",
-    "eslint-config-next": "14.2.1",
+    "eslint-config-next": "14.2.3",
     "prettier": "^3.3.2",
     "typescript": "^5.4.5"
   },
-  "packageManager": "pnpm@9.0.1"
+  "packageManager": "pnpm@9.3.0"
 }
