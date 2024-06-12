@@ -2,7 +2,6 @@ import { Page } from "@/common/types/page";
 
 export const navPages: Page[] = [
   { title: "~", path: "/", breadcrumb: "/home/julianv" },
-  { title: "~/about", path: "/about" },
   {
     title: "~/projects",
     path: "/projects",
