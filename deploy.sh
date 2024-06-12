@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-gcloud run deploy --source .
+gcloud run deploy julianvos-website --source .
