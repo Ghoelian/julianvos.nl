@@ -15,13 +15,7 @@ export default function Home() {
   return (
     <>
       <Typography>
-        I&apos;m rebuilding my website in a more up-to-date framework than plain
-        React, and decided to redesign it as well.
-      </Typography>
-      <br />
-      <Typography>
-        I&apos;m not quite done yet, but for now, here&apos;s the unfinished
-        version.
+        This website is still a work-in-progress.
       </Typography>
 
       <br />
@@ -52,9 +46,39 @@ export default function Home() {
           <CardHeader title="Tech stack" />
           <CardContent>
             <Typography variant="body1">
-              The Paytree dashboard is built using{" "}
+              This website is built using{" "}
               <Link href="https://nextjs.org">Next.js</Link> and{" "}
-              <Link href="https://mui.com">Material UI</Link>.
+              <Link href="https://mui.com">Material UI</Link> for styling.
+            </Typography>
+            <br />
+            <br />
+            <Typography variant="body1">
+              At Paytree, I develop a payment platform mostly used on events
+              like festivals. This platform includes:
+            </Typography>
+            <br />
+            <Typography variant="body1">
+              - A dashboard for product and cash register management, and
+              statistics;
+            </Typography>
+            <Typography variant="body1">
+              - A mobile POS Android app used by the cashiers, where they can
+              select products and pay using various payment methods, including
+              NFC balance cards and contactless card payments;
+            </Typography>
+            <Typography variant="body1">
+              - A customer-facing balance card website, where users can see their
+              balance and past orders, and top-up their balance cards using
+              iDeal;
+            </Typography>
+
+            <Typography variant="body1">- And an API that powers all of this.</Typography>
+            <br />
+            <br />
+            <Typography variant="body1">
+              The Paytree dashboard is built with Material UI for styling as
+              well, but on top of plain React.js for now. I plan to move this to
+              Next.js as well in the future.
             </Typography>
             <br />
             <Typography variant="body1">
@@ -63,7 +87,7 @@ export default function Home() {
             </Typography>
             <br />
             <Typography variant="body1">
-              And the API that powers both of these is built using{" "}
+              The API that powers both of these is built using{" "}
               <Link href="https://ktor.io">Ktor</Link>,{" "}
               <Link href="https://insert-koin.io">Koin</Link>,{" "}
               <Link href="https://github.com/JetBrains/Exposed">Exposed</Link>,
