@@ -35,11 +35,17 @@ const theme = createTheme({
           ...darkScrollbar(),
           height: "100%",
         },
-        a: {
-          color: "white",
-          "&:hover": {
-            color: "grey",
-          },
+        "& .MuiTypography-root-MuiLink-root": {
+          color: "#ffffff",
+        },
+        "& .MuiLink-root:visited:hover": {
+          color: "#deb6eb",
+        },
+        "& .MuiLink-root:hover": {
+          color: "#9ac68e",
+        },
+        "& .MuiLink-root:visited": {
+          color: "#d377f0",
         },
       },
     },
