@@ -1,103 +1,161 @@
-import { Card, CardContent, CardHeader } from "@mui/material";
-import Grid2 from "@mui/material/Unstable_Grid2";
+import {
+  Box,
+  Card,
+  CardContent,
+  CardHeader,
+  Link,
+  Typography,
+} from "@mui/material";
+import { DateTime } from "luxon";
+import styles from "@/app/styles.module.css";
 
-const gridProps = {
-  xs: 6,
-  md: 4,
-  p: 2,
-};
+// lmao this is so dumb
+const age = DateTime.local(2000, 12, 25).diffNow("years");
 
 export default function Home() {
   return (
-    <Grid2 container>
-      <Grid2 {...gridProps}>
+    <>
+      <Typography>
+        I&apos;m rebuilding my website in a more up-to-date framework than plain
+        React, and decided to redesign it as well.
+      </Typography>
+      <br />
+      <Typography>
+        I&apos;m not quite done yet, but for now, here&apos;s the unfinished
+        version.
+      </Typography>
+
+      <br />
+
+      <Box
+        sx={{
+          display: "grid",
+          gap: 2,
+        }}
+      >
         <Card>
-          <CardHeader title="Lorem ipsum dolor sit amet" />
           <CardContent>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean sem
-            ligula, mollis vitae malesuada at, tristique id turpis. Etiam id
-            libero semper, rhoncus velit vitae, fringilla ante. Integer sed odio
-            feugiat, tincidunt orci sed, luctus tellus. Phasellus elementum
-            pellentesque felis sed maximus. Nunc elementum at orci eget semper.
-            Curabitur tristique tempor maximus. Vivamus nulla augue, volutpat
-            eget erat sed, pharetra dapibus nibh. Nullam cursus sed ex at
-            aliquet. Morbi vitae cursus quam. Fusce fermentum massa quis enim
-            blandit luctus. Praesent sagittis vitae lorem sed facilisis.
-            Suspendisse maximus maximus dolor auctor bibendum. Sed facilisis ut
-            dolor in rhoncus. Donec non condimentum neque, nec lacinia eros.
-            Maecenas posuere dolor sit amet dui finibus convallis. Sed convallis
-            nibh eu mollis consequat.
+            <Typography variant="body1">
+              I&apos;m Julian, a {Math.floor(Math.abs(age.years))} year old
+              software developer from Drenthe, the Netherlands.
+            </Typography>
+            <br />
+            <Typography variant="body1">
+              I&apos;m currently working at{" "}
+              <Link className={styles.link} href="https://paytree.nl">
+                Paytree Payment Solutions
+              </Link>
+              .<br />
+              Here, I&apos;m building a full-stack payment platform.
+            </Typography>
           </CardContent>
         </Card>
-      </Grid2>
-      <Grid2 {...gridProps}>
+
         <Card>
-          <CardHeader title="Pellentesque ullamcorper massa nec viverra" />
+          <CardHeader title="Tech stack" />
           <CardContent>
-            Pellentesque ullamcorper massa nec viverra commodo. Nunc at sem
-            dictum, convallis dui pellentesque, volutpat arcu. Quisque
-            pellentesque purus in aliquet elementum. Donec molestie nisl ut nibh
-            accumsan, sit amet mattis nulla mollis. Sed justo enim, placerat ut
-            sapien ac, iaculis iaculis leo. Cras commodo est eget nisl
-            ullamcorper cursus. Aliquam a egestas nisi. Proin dapibus eget nisi
-            sagittis ornare. Aliquam erat volutpat. Proin dignissim pretium
-            ligula, vel consectetur erat convallis facilisis. Sed interdum metus
-            vulputate, sagittis erat eu, vulputate sem. Nullam accumsan tempus
-            sem, nec ullamcorper orci vestibulum id. Donec aliquet dui ut ante
-            ullamcorper dapibus. Vivamus sem urna, ornare nec felis ut,
-            consequat aliquam tellus. Sed id nisl ullamcorper, finibus ante at,
-            scelerisque augue. Nunc quis gravida arcu, sed pharetra purus.
+            <Typography variant="body1">
+              The Paytree dashboard is built using{" "}
+              <Link className={styles.link} href="https://nextjs.org">
+                Next.js
+              </Link>{" "}
+              and{" "}
+              <Link className={styles.link} href="https://mui.com">
+                Material UI
+              </Link>
+              .
+            </Typography>
+            <br />
+            <Typography variant="body1">
+              The mobile POS app is built with{" "}
+              <Link className={styles.link} href="https://flutter.dev">
+                Flutter.
+              </Link>
+            </Typography>
+            <br />
+            <Typography variant="body1">
+              And the API that powers both of these is built using{" "}
+              <Link className={styles.link} href="https://ktor.io">
+                Ktor
+              </Link>
+              ,{" "}
+              <Link className={styles.link} href="https://insert-koin.io">
+                Koin
+              </Link>
+              ,{" "}
+              <Link
+                className={styles.link}
+                href="https://github.com/JetBrains/Exposed"
+              >
+                Exposed
+              </Link>
+              , and backed by a{" "}
+              <Link className={styles.link} href="https://www.postgresql.org/">
+                PostgreSQL
+              </Link>{" "}
+              database.
+            </Typography>
+            <br />
+            <Typography variant="body1">
+              All of this is deployed to and built using Google Cloud.
+            </Typography>
           </CardContent>
         </Card>
-      </Grid2>
-      <Grid2 {...gridProps}>
+
         <Card>
-          <CardHeader title="Maecenas tristique ante eget" />
+          <CardHeader title="A little bit more about me" />
           <CardContent>
-            Maecenas tristique ante eget viverra tincidunt. Donec elementum eros
-            velit, nec fringilla enim varius id. Class aptent taciti sociosqu ad
-            litora torquent per conubia nostra, per inceptos himenaeos. Etiam
-            facilisis leo mauris. Nunc sit amet ipsum velit. Mauris fermentum
-            felis odio, at imperdiet nisl congue eu. Ut nec augue maximus,
-            fermentum urna non, rutrum leo. Fusce eu odio felis. Fusce cursus
-            iaculis sem, a auctor nunc maximus quis. Quisque vestibulum maximus
-            tempus. Nam pulvinar faucibus nibh. Vivamus elementum turpis ligula,
-            vitae feugiat massa tincidunt nec. Vestibulum consectetur mi sit
-            amet ipsum vestibulum elementum. Aenean hendrerit urna quis vehicula
-            eleifend.
+            <Typography variant="body1">
+              I picked up a love for programming in 2013, from watching{" "}
+              <Link
+                className={styles.link}
+                href="https://www.youtube.com/user/shiffman"
+              >
+                The Coding Train
+              </Link>
+              . I learned the basics of{" "}
+              <Link className={styles.link} href="https://processing.org">
+                Processing
+              </Link>
+              , and started following an official programming education in 2017.
+            </Typography>
+            <br />
+            <Typography variant="body1">
+              From October 2018 until March 2019, I was participating in an
+              international internship in the UK, where I have been working with
+              Node.js on the back-end. One of the most difficult and useful
+              skills I&apos;ve had to learn was using Async.js, and subsequently
+              learning to use callbacks, instead of the default async/await.
+            </Typography>
+            <br />
+            <Typography variant="body1">
+              One of my favourite pastimes is playing the guitar. I started
+              taking lessons at the age of 14, but my skills with the electric
+              guitar are mostly self-taught. I try to practice at least once a
+              day, and am always looking for the next riff to master.
+            </Typography>
+            <br />
+            <Typography variant="body1">
+              For as long as I can remember, video games have been a part of my
+              life. My all-time favourite game is The Legend of Zelda: Ocarina
+              of Time, closely followed by{" "}
+              <Link className={styles.link} href="https://clonehero.net">
+                Clone Hero
+              </Link>{" "}
+              and Breath of the Wild.
+            </Typography>
+            <br />
+            <Typography variant="body1">I&apos;m familiar with:</Typography>
+
+            <ul>
+              <li>React.js</li>
+              <li>Kotlin</li>
+              <li>Flutter/Dart</li>
+              <li>Google Cloud</li>
+            </ul>
           </CardContent>
         </Card>
-      </Grid2>
-      <Grid2 {...gridProps}>
-        <Card>
-          <CardHeader title="Quisque maximus urna vehicula" />
-          <CardContent>
-            Quisque maximus urna vehicula lectus pharetra, ornare bibendum
-            turpis bibendum. Pellentesque interdum, arcu in hendrerit imperdiet,
-            eros enim aliquet nibh, posuere elementum justo tortor fringilla mi.
-            Maecenas consequat pretium risus, in porta massa cursus eu. Vivamus
-            condimentum efficitur accumsan. Fusce diam eros, commodo laoreet
-            diam fringilla, tempus cursus diam. Nullam a nunc vel mi ullamcorper
-            aliquet. Praesent quis hendrerit urna, at aliquam lorem. Vivamus in
-            interdum justo, sit amet tincidunt nulla. Aliquam fringilla
-            malesuada massa, sed ornare metus mattis quis. Cras sit amet blandit
-            libero, ut lacinia arcu. Pellentesque in nunc malesuada, sodales sem
-            quis, facilisis magna.
-          </CardContent>
-        </Card>
-      </Grid2>
-      <Grid2 {...gridProps}>
-        <Card>
-          <CardHeader title="Cras at porta mi" />
-          <CardContent>
-            Cras at porta mi. Duis augue ex, blandit vel iaculis non, mollis et
-            lorem. Quisque non luctus lacus. Mauris id erat at metus aliquam
-            imperdiet. Suspendisse eget nisl id elit auctor suscipit. Ut turpis
-            massa, accumsan eu aliquam sed, interdum sit amet elit. Fusce
-            hendrerit lobortis nisl in ornare.
-          </CardContent>
-        </Card>
-      </Grid2>
-    </Grid2>
+      </Box>
+    </>
   );
 }
