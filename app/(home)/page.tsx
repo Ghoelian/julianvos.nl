@@ -106,46 +106,49 @@ export default function Home() {
           <CardHeader title="A little bit more about me" />
           <CardContent>
             <Typography variant="body1">
-              I picked up a love for programming in 2013, from watching{" "}
+              In 2013, I discovered my passion for programming, which was
+              sparked by watching{" "}
               <Link
                 className={styles.link}
                 href="https://www.youtube.com/user/shiffman"
               >
                 The Coding Train
               </Link>
-              . I learned the basics of{" "}
+              . I began my formal programming education in 2017, following the
+              fundamentals I had learned in{" "}
               <Link className={styles.link} href="https://processing.org">
                 Processing
               </Link>
-              , and started following an official programming education in 2017.
+              .
             </Typography>
             <br />
             <Typography variant="body1">
-              From October 2018 until March 2019, I was participating in an
-              international internship in the UK, where I have been working with
-              Node.js on the back-end. One of the most difficult and useful
-              skills I&apos;ve had to learn was using Async.js, and subsequently
-              learning to use callbacks, instead of the default async/await.
+              From October 2018 to March 2019, I had the privilege of
+              participating in an international internship in the United
+              Kingdom. During this time, I specialized in Node.js for back-end
+              development. One of the most valuable skills I acquired was the
+              use of Async.js, which led to my proficiency in callbacks, as an
+              alternative to the conventional async/await approach.
             </Typography>
             <br />
             <Typography variant="body1">
-              One of my favourite pastimes is playing the guitar. I started
-              taking lessons at the age of 14, but my skills with the electric
-              guitar are mostly self-taught. I try to practice at least once a
-              day, and am always looking for the next riff to master.
+              As a hobby, I enjoy playing the drums, which I started fairly
+              recently. My expertise with the drums has been primarily
+              self-taught, and I make it a point to practice daily, constantly
+              seeking to master new songs.
             </Typography>
             <br />
             <Typography variant="body1">
-              For as long as I can remember, video games have been a part of my
-              life. My all-time favourite game is The Legend of Zelda: Ocarina
-              of Time, closely followed by{" "}
+              Video games have been a significant part of my life for as long as
+              I can recall. My all-time favorite game is The Legend of Zelda:
+              Ocarina of Time, followed closely by{" "}
               <Link className={styles.link} href="https://clonehero.net">
                 Clone Hero
               </Link>{" "}
               and Breath of the Wild.
             </Typography>
             <br />
-            <Typography variant="body1">I&apos;m familiar with:</Typography>
+            <Typography variant="body1">My skill set includes:</Typography>
 
             <ul>
               <li>React.js</li>
