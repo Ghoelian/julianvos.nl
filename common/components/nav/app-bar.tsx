@@ -97,9 +97,8 @@ const AppBar = () => {
             variant="h5"
             noWrap
             sx={{
-              mr: 2,
               display: { xs: "flex", md: "none" },
-              flexGrow: 1,
+              flexGrow: 3,
               fontWeight: 700,
               color: "inherit",
             }}
@@ -107,8 +106,8 @@ const AppBar = () => {
             🦊
           </Typography>
 
-          {/*Menu items*/}
-          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+          {/*Large display items*/}
+          <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" }, ml: 4 }}>
             {navPages.map((page: Page, idx: number) => (
               <Button
                 key={`nav-appbar-${idx}`}
