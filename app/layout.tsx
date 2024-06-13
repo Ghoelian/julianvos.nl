@@ -47,12 +47,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                     >
                       <Box
                         sx={{
-                          width: 850,
+                          maxWidth: 850,
                         }}
                       >
                         <Breadcrumbs />
 
-                        <Box component="main" sx={{ pt: 2 }}>
+                        <Box component="main" sx={{ p: 2 }}>
                           {children}
                         </Box>
                       </Box>
