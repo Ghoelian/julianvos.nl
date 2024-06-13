@@ -36,7 +36,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                     <Toolbar />
 
                     <Box
-                      component="main"
                       sx={{
                         pt: 2,
                         display: "flex",
@@ -53,7 +52,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                       >
                         <Breadcrumbs />
 
-                        <Box sx={{ pt: 2 }}>{children}</Box>
+                        <Box component="main" sx={{ pt: 2 }}>
+                          {children}
+                        </Box>
                       </Box>
                     </Box>
                   </Box>
