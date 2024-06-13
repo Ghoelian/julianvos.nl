@@ -6,7 +6,6 @@ export const navPages: Page[] = [
     title: "~/projects",
     path: "/projects",
   },
-  { title: "~/contact", path: "/contact" },
 ];
 
 export const pages: Page[] = [
