@@ -35,30 +35,27 @@ export default function RootLayout({ children }: { children: ReactNode }) {
                   <Box>
                     <Toolbar />
 
-                    <Box sx={{ p: 1 }}>
-                      <Breadcrumbs />
-                    </Box>
-
-                    <main>
+                    <Box
+                      component="main"
+                      sx={{
+                        pt: 2,
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        justifyItems: "center",
+                        justifyContent: "center",
+                      }}
+                    >
                       <Box
                         sx={{
-                          p: 4,
-                          display: "flex",
-                          flexDirection: "column",
-                          alignItems: "center",
-                          justifyItems: "center",
-                          justifyContent: "center",
+                          maxWidth: 850,
                         }}
                       >
-                        <Box
-                          sx={{
-                            maxWidth: 850,
-                          }}
-                        >
-                          {children}
-                        </Box>
+                        <Breadcrumbs />
+
+                        <Box sx={{ pt: 2 }}>{children}</Box>
                       </Box>
-                    </main>
+                    </Box>
                   </Box>
                 </Box>
 
