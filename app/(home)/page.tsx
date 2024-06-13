@@ -7,6 +7,7 @@ import {
   Typography,
 } from "@mui/material";
 import { DateTime } from "luxon";
+import StyledNextLink from "@/common/components/styled-next-link";
 
 // lmao this is so dumb
 const age = DateTime.local(2000, 12, 25).diffNow("years");
@@ -14,9 +15,7 @@ const age = DateTime.local(2000, 12, 25).diffNow("years");
 export default function Home() {
   return (
     <>
-      <Typography>
-        This website is still a work-in-progress.
-      </Typography>
+      <Typography>This website is still a work-in-progress.</Typography>
 
       <br />
 
@@ -35,7 +34,9 @@ export default function Home() {
             <br />
             <Typography variant="body1">
               I&apos;m currently working at{" "}
-              <Link href="https://paytree.nl">Paytree Payment Solutions</Link>
+              <StyledNextLink href="https://paytree.nl">
+                Paytree Payment Solutions
+              </StyledNextLink>
               .<br />
               Here, I&apos;m building a full-stack payment platform.
             </Typography>
@@ -47,8 +48,12 @@ export default function Home() {
           <CardContent>
             <Typography variant="body1">
               This website is built using{" "}
-              <Link href="https://nextjs.org">Next.js</Link> and{" "}
-              <Link href="https://mui.com">Material UI</Link> for styling.
+              <StyledNextLink href="https://nextjs.org">Next.js</StyledNextLink>{" "}
+              and{" "}
+              <StyledNextLink href="https://mui.com">
+                Material UI
+              </StyledNextLink>{" "}
+              for styling.
             </Typography>
             <br />
             <br />
@@ -67,12 +72,14 @@ export default function Home() {
               NFC balance cards and contactless card payments;
             </Typography>
             <Typography variant="body1">
-              - A customer-facing balance card website, where users can see their
-              balance and past orders, and top-up their balance cards using
-              iDeal;
+              - A customer-facing balance card website, where users can see
+              their balance and past orders, and top-up their balance cards
+              using iDeal;
             </Typography>
 
-            <Typography variant="body1">- And an API that powers all of this.</Typography>
+            <Typography variant="body1">
+              - And an API that powers all of this.
+            </Typography>
             <br />
             <br />
             <Typography variant="body1">
@@ -83,16 +90,25 @@ export default function Home() {
             <br />
             <Typography variant="body1">
               The mobile POS app is built with{" "}
-              <Link href="https://flutter.dev">Flutter.</Link>
+              <StyledNextLink href="https://flutter.dev">
+                Flutter.
+              </StyledNextLink>
             </Typography>
             <br />
             <Typography variant="body1">
               The API that powers both of these is built using{" "}
-              <Link href="https://ktor.io">Ktor</Link>,{" "}
-              <Link href="https://insert-koin.io">Koin</Link>,{" "}
-              <Link href="https://github.com/JetBrains/Exposed">Exposed</Link>,
-              and backed by a{" "}
-              <Link href="https://www.postgresql.org/">PostgreSQL</Link>{" "}
+              <StyledNextLink href="https://ktor.io">Ktor</StyledNextLink>,{" "}
+              <StyledNextLink href="https://insert-koin.io">
+                Koin
+              </StyledNextLink>
+              ,{" "}
+              <StyledNextLink href="https://github.com/JetBrains/Exposed">
+                Exposed
+              </StyledNextLink>
+              , and backed by a{" "}
+              <StyledNextLink href="https://www.postgresql.org/">
+                PostgreSQL
+              </StyledNextLink>{" "}
               database.
             </Typography>
             <br />
@@ -108,12 +124,15 @@ export default function Home() {
             <Typography variant="body1">
               In 2013, I discovered my passion for programming, which was
               sparked by watching{" "}
-              <Link href="https://www.youtube.com/user/shiffman">
+              <StyledNextLink href="https://www.youtube.com/user/shiffman">
                 The Coding Train
-              </Link>
+              </StyledNextLink>
               . I began my formal programming education in 2017, following the
               fundamentals I had learned in{" "}
-              <Link href="https://processing.org">Processing</Link>.
+              <StyledNextLink href="https://processing.org">
+                Processing
+              </StyledNextLink>
+              .
             </Typography>
             <br />
             <Typography variant="body1">
@@ -136,8 +155,10 @@ export default function Home() {
               Video games have been a significant part of my life for as long as
               I can recall. My all-time favorite game is The Legend of Zelda:
               Ocarina of Time, followed closely by{" "}
-              <Link href="https://clonehero.net">Clone Hero</Link> and Breath of
-              the Wild.
+              <StyledNextLink href="https://clonehero.net">
+                Clone Hero
+              </StyledNextLink>{" "}
+              and Breath of the Wild.
             </Typography>
             <br />
             <Typography variant="body1">My skill set includes:</Typography>
