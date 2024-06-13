@@ -1,6 +1,6 @@
 import { Box, Paper, Typography } from "@mui/material";
 import { DateTime } from "luxon";
-import Link from "next/link";
+import StyledNextLink from "@/common/components/styled-next-link";
 
 const Footer = () => {
   return (
@@ -19,9 +19,9 @@ const Footer = () => {
 
       <Box>
         <Typography>Contact</Typography>
-        <Typography component={Link} href="mailto:post@julianvos.nl">
+        <StyledNextLink href="mailto:post@julianvos.nl">
           post@julianvos.nl
-        </Typography>
+        </StyledNextLink>
       </Box>
     </Paper>
   );
