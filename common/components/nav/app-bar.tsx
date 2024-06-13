@@ -33,8 +33,9 @@ const AppBar = () => {
 
   return (
     <MuiAppBar>
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
+      <Container maxWidth="xl" sx={{ p: 0 }}>
+        <Toolbar disableGutters sx={{ width: "100vw" }}>
+          {/*Large display logo*/}
           <Typography
             variant="h6"
             noWrap
