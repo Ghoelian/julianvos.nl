@@ -40,7 +40,6 @@ const AppBar = () => {
             variant="h6"
             noWrap
             sx={{
-              mr: 2,
               display: { xs: "none", md: "flex" },
               color: "inherit",
             }}
@@ -48,7 +47,7 @@ const AppBar = () => {
             🦊
           </Typography>
           {/*Small display menu*/}
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+          <Box sx={{ flexGrow: 2, display: { xs: "flex", md: "none" }, ml: 1 }}>
             <IconButton
               size="large"
               aria-label="Open menu"
@@ -93,6 +92,7 @@ const AppBar = () => {
             </Menu>
           </Box>
 
+          {/*Small display logo*/}
           <Typography
             variant="h5"
             noWrap
