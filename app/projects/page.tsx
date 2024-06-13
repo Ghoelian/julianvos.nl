@@ -5,6 +5,7 @@ import SnakeCover from "@/common/assets/projects/snake.webp";
 import PaytreePosCover from "@/common/assets/projects/paytree-pos.png";
 import ProjectTile from "@/app/projects/project-tile";
 import { Skeleton } from "@mui/material";
+import { Metadata } from "next";
 
 const projects: Project[] = [
   {
@@ -66,6 +67,10 @@ const projects: Project[] = [
     path: "/projects/paytree/api",
   },
 ];
+
+export const metadata: Metadata = {
+  title: "/home/julianv/projects",
+};
 
 const Portfolio = () => {
   return (
