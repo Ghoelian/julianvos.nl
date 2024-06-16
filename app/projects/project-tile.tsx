@@ -9,6 +9,10 @@ const ProjectTile = ({ project }: { project: Project }) => {
       sx={{
         display: "flex",
         height: 256,
+        mb: 2,
+        "&:last-child": {
+          mb: 0,
+        },
       }}
     >
       <CardMedia component="span">
