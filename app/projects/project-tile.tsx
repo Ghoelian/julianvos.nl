@@ -1,7 +1,7 @@
 import { Project } from "@/common/types/project";
 import { Box, Card, CardMedia, Chip, Typography } from "@mui/material";
 import Image from "next/image";
-import Link from "next/link";
+import StyledNextLink from "@/common/components/styled-next-link";
 
 const ProjectTile = ({ project }: { project: Project }) => {
   return (
@@ -71,9 +71,9 @@ const ProjectTile = ({ project }: { project: Project }) => {
         }}
       >
         <Box sx={{ flexGrow: 1 }} />
-        <Typography component={Link} href={project.path} noWrap>
+        <StyledNextLink href={project.path} noWrap>
           Learn more &gt;
-        </Typography>
+        </StyledNextLink>
       </Box>
     </Card>
   );
