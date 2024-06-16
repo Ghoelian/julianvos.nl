@@ -8,7 +8,6 @@ const ProjectTile = ({ project }: { project: Project }) => {
     <Card
       sx={{
         display: "flex",
-        m: 2,
         height: 256,
       }}
     >
