@@ -1,3 +1,5 @@
+export const runtime = 'edge';
+
 import type { Metadata } from "next";
 import { ReactNode, StrictMode } from "react";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
