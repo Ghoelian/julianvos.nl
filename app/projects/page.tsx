@@ -1,3 +1,5 @@
+export const runtime = 'edge';
+
 import { Project } from "@/common/types/project";
 import PongCover from "@/common/assets/projects/pong.webp";
 import LyricsCover from "@/common/assets/projects/lyrics.webp";
