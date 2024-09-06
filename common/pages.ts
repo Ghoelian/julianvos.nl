@@ -22,4 +22,8 @@ export const pages: Page[] = [
     title: "~/projects/snake",
     path: "/projects/snake",
   },
+  {
+    title: "404",
+    path: "/404",
+  },
 ];

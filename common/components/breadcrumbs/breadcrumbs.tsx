@@ -16,7 +16,13 @@ const Breadcrumbs = () => {
   useEffect(() => {
     const page = pages.find((value) => value.path === pathname);
 
-    if (page === undefined || page.path === "/") {
+    if (page === undefined) {
+      const notFound = pages.find((value) => value.title === "404");
+
+      setBreadcrumbs([pages[0], notFound!]);
+
+      return;
+    } else if (page.path === "/") {
       setBreadcrumbs([pages[0]]);
 
       return;
