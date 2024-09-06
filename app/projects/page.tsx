@@ -2,6 +2,7 @@ import { Project } from "@/common/types/project";
 import PongCover from "@/common/assets/projects/pong.webp";
 import LyricsCover from "@/common/assets/projects/lyrics.webp";
 import SnakeCover from "@/common/assets/projects/snake.webp";
+import PaytreeDashboardCover from "@/common/assets/projects/paytree-dashboard.png";
 import PaytreePosCover from "@/common/assets/projects/paytree-pos.png";
 import ProjectTile from "@/app/projects/project-tile";
 import { Skeleton } from "@mui/material";
@@ -9,39 +10,11 @@ import { Metadata } from "next";
 
 const projects: Project[] = [
   {
-    coverImage: PongCover,
-    title: "Pong",
-    description: "Pong in p5.js",
-    tags: ["Javascript", "p5.js"],
-    path: "/projects/pong",
-  },
-  {
-    coverImage: LyricsCover,
-    title: "Lyrics chart",
-    description: "Pong in p5.js",
-    tags: ["Javascript", "p5.js"],
-    path: "/projects/lyrics-thing",
-  },
-  {
-    coverImage: SnakeCover,
-    title: "Snake",
-    description: "Pong in p5.js",
-    tags: ["Javascript", "p5.js"],
-    path: "/projects/snake",
-  },
-  {
-    coverComponent: (
-      <Skeleton
-        variant="rectangular"
-        animation={false}
-        width={256}
-        height={256}
-      />
-    ),
+    coverImage: PaytreeDashboardCover,
     title: "Paytree dashboard",
     description:
       "Dashboard where customers can create products, add them to cash registers, and view their event's statistics.",
-    tags: ["Javascript", "React.js", "MUI"],
+    tags: ["React.js", "Material UI"],
     path: "/projects/paytree/dashboard",
   },
   {
@@ -65,6 +38,27 @@ const projects: Project[] = [
     description: "API that powers the other Paytree projects.",
     tags: ["Kotlin", "Ktor", "Exposed", "PostgreSQL"],
     path: "/projects/paytree/api",
+  },
+  {
+    coverImage: PongCover,
+    title: "Pong",
+    description: "Pong in p5.js",
+    tags: ["Javascript", "p5.js"],
+    path: "/projects/pong",
+  },
+  {
+    coverImage: LyricsCover,
+    title: "Lyrics chart",
+    description: "Pong in p5.js",
+    tags: ["Javascript", "p5.js"],
+    path: "/projects/lyrics-thing",
+  },
+  {
+    coverImage: SnakeCover,
+    title: "Snake",
+    description: "Pong in p5.js",
+    tags: ["Javascript", "p5.js"],
+    path: "/projects/snake",
   },
 ];
 
