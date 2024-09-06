@@ -180,10 +180,11 @@ export default function Home() {
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                The Coding Train
-              </StyledNextLink>
-              . I began my formal programming education in 2017, following the
-              fundamentals I had learned in{" "}
+                Daniel Shiffman
+              </StyledNextLink>{" "}
+              completing challenges set by his audience. I began my formal
+              programming education in 2017, following the fundamentals I had
+              learned in{" "}
               <StyledNextLink
                 href="https://processing.org"
                 target="_blank"
