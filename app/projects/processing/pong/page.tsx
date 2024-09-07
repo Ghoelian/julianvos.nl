@@ -48,10 +48,20 @@ const Pong = () => {
           the right paddle.
         </Typography>
 
-        <iframe
-          src="https://editor.p5js.org/Ghoelian/full/z797FL6nb"
-          style={{ width: 750, height: 450 }}
-        />
+        <br />
+
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <iframe
+            src="https://editor.p5js.org/Ghoelian/full/z797FL6nb"
+            style={{ width: 750, height: 450 }}
+          />
+        </Box>
       </CardContent>
     </Card>
   );
