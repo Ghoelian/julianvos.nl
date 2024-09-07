@@ -21,7 +21,8 @@ export const pages: Page[] = [
   },
   {
     title: "~/projects/snake",
-    path: "/projects/snake",
+    path: "/projects/processing/snake",
+    breadcrumb: "/projects/snake"
   },
   {
     title: "404",

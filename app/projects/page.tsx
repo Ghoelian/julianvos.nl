@@ -60,7 +60,7 @@ const projects: Project[] = [
     title: "Snake",
     description: "Snake in Processing.",
     tags: ["Processing"],
-    path: "https://codeberg.org/Ghoelian/processing-projects/src/branch/master/Snake",
+    path: "/projects/processing/snake",
   },
 ];
 
