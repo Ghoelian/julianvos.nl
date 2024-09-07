@@ -45,7 +45,7 @@ const projects: Project[] = [
     description:
       "Pong in Processing. Todo: convert these Processing projects to p5.js, so I can put a preview of them online here.",
     tags: ["Processing"],
-    path: "https://codeberg.org/Ghoelian/processing-projects/src/branch/master/Pong",
+    path: "/projects/processing/pong",
   },
   {
     coverImage: LyricsCover,

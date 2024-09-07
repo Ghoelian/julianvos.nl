@@ -12,7 +12,8 @@ export const pages: Page[] = [
   ...navPages,
   {
     title: "~/projects/pong",
-    path: "/projects/pong",
+    path: "/projects/processing/pong",
+    breadcrumb: "/projects/pong"
   },
   {
     title: "~/projects/lyrics-thing",
