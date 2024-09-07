@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 const Snake = () => {
   return (
     <Card>
-      <CardHeader title="Pong in p5.js" />
+      <CardHeader title="Snake in p5.js" />
 
       <CardContent>
         <Typography>
