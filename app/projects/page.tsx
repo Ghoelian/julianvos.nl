@@ -42,24 +42,23 @@ const projects: Project[] = [
   {
     coverImage: PongCover,
     title: "Pong",
-    description:
-      "Pong in Processing. Todo: convert these Processing projects to p5.js, so I can put a preview of them online here.",
-    tags: ["Processing"],
+    description: "Pong built with p5.js.",
+    tags: ["p5.js", "JavaScript"],
     path: "/projects/processing/pong",
   },
   {
     coverImage: LyricsCover,
     title: "Lyrics chart",
     description:
-      "This project shows a graph of words in a song, showing a coloured rectangle where words intersect.",
+      "This project shows a graph of words in a song, showing a coloured rectangle where words intersect. Todo: convert to p5.js.",
     tags: ["Processing"],
     path: "https://codeberg.org/Ghoelian/processing-projects/src/branch/master/Song_lyrics_chart",
   },
   {
     coverImage: SnakeCover,
     title: "Snake",
-    description: "Snake in Processing.",
-    tags: ["Processing"],
+    description: "Snake built with p5.js.",
+    tags: ["p5.js", "JavaScript"],
     path: "/projects/processing/snake",
   },
 ];
