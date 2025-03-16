@@ -1,14 +1,4 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-    async redirects() {
-        return [
-            {
-                source: '/.well-known/matrix/*',
-                destination: 'https://matrix.julianvos.nl/.well-known/matrix/*',
-                permanent: false
-            }
-        ]
-    }
-};
+const nextConfig = {};
 
 export default nextConfig;
