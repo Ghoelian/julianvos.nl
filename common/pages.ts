@@ -18,6 +18,7 @@ export const pages: Page[] = [
   {
     title: "~/projects/lyrics-thing",
     path: "/projects/lyrics-thing",
+    breadcrumb: "/projects/lyrics-thing"
   },
   {
     title: "~/projects/snake",
