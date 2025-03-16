@@ -1,3 +1,5 @@
+export const runtime = "edge";
+
 export async function GET(request: Request) {
   const response = await fetch(
     "https://matrix.julianvos.nl/.well-known/matrix/client"
