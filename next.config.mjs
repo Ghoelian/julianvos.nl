@@ -5,7 +5,7 @@ const nextConfig = {
             {
                 source: '/.well-known/matrix/*',
                 destination: 'https://matrix.julianvos.nl/.well-known/matrix/*',
-                statusCode: 302
+                permanent: false
             }
         ]
     }
