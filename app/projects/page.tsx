@@ -4,7 +4,7 @@ import LyricsCover from "@/common/assets/projects/lyrics.webp";
 import SnakeCover from "@/common/assets/projects/snake.webp";
 import PaytreeDashboardCover from "@/common/assets/projects/paytree-dashboard.png";
 import PaytreePosCover from "@/common/assets/projects/paytree-pos.png";
-import ProjectTile from "@/app/projects/project-tile";
+import Tile from "@/common/components/tile";
 import { Skeleton } from "@mui/material";
 import { Metadata } from "next";
 
@@ -71,7 +71,7 @@ const Portfolio = () => {
   return (
     <>
       {projects.map((project, idx) => (
-        <ProjectTile key={`projects-${idx}`} project={project} />
+        <Tile key={`projects-${idx}`} item={project} />
       ))}
     </>
   );
