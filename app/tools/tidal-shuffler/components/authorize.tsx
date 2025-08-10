@@ -11,10 +11,12 @@ const Authorize = () => {
     const response = await fetch("./tidal-shuffler/api/authorize");
     const loginDetails: LoginDetails = await response.json();
 
-    sessionStorage.setItem(
-      "oauthCodeChallenge",
+    localStorage.setItem(
+      "tidalOauthCodeChallenge",
       loginDetails.oauthCodeChallenge,
     );
+
+    localStorage.setItem("tidalOauthState", loginDetails.state);
 
     window.open(loginDetails.loginUrl, "_self");
   };
