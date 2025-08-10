@@ -1,7 +1,12 @@
 {
-    "name": "julianvos-nl",
-    "compatibility_date": "2025-08-10",
-    "assets": {
-        "directory": ".vercel/output/static"
-    }
+  "name": "julianvos-nl",
+  "main": ".open-next/worker.js",
+  "compatibility_date": "2025-08-10",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS"
+  }
 }
