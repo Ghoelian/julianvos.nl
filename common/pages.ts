@@ -30,6 +30,11 @@ export const pages: Page[] = [
     breadcrumb: "/projects/snake"
   },
   {
+    title: "~/tools/tidal-shuffler",
+    path: "/tools/tidal-shuffler",
+    breadcrumb: "/tools/tidal-shuffler"
+  },
+  {
     title: "404",
     path: "/404",
   },

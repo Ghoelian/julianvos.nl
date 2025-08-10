@@ -10,7 +10,7 @@ const tools: Tool[] = [
   },
 ];
 
-export default function Tools() {
+const Tools = () => {
   return (
     <>
       {tools.map((tool, idx) => (
@@ -18,4 +18,6 @@ export default function Tools() {
       ))}
     </>
   );
-}
+};
+
+export default Tools;

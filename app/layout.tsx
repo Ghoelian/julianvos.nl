@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   description: "/home/julianv",
 };
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
     <html lang="en" style={{ height: "100%" }}>
       <body>
@@ -69,4 +69,6 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;
