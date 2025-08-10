@@ -2,13 +2,14 @@
 
 import { Button } from "@mui/material";
 import React from "react";
+import { LoginDetails } from "@/common/types/api/responses/login-details";
 
 const Authorize = () => {
   const handleAuthorize = async (
     event: React.MouseEvent<HTMLButtonElement>,
   ) => {
     const response = await fetch("./tidal-shuffler/api/authorize");
-    const loginDetails = await response.json();
+    const loginDetails: LoginDetails = await response.json();
 
     sessionStorage.setItem(
       "oauthCodeChallenge",
