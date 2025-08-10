@@ -1,0 +1,26 @@
+export const sha256 = async (message: string) => {
+  const msgUint8 = new TextEncoder().encode(message); // encode as (utf-8) Uint8Array
+  const hashBuffer = await globalThis.crypto.subtle.digest("SHA-256", msgUint8); // hash the message
+  const bytes = new Uint8Array(hashBuffer);
+  const len = bytes.byteLength;
+  let binary = "";
+
+  for (let i = 0; i < len; i += 1) {
+    binary += String.fromCharCode(bytes[i]!);
+  }
+
+  return globalThis.btoa(binary);
+};
+
+export const base64URLEncode = (value: string) => {
+  return value.replace(/\+/g, "-").replace(/\//g, "_").replace(/=/g, "");
+};
+
+export const generateOauthCodeChallenge = () => {
+  const array = new Uint8Array(100);
+  const string = base64URLEncode(
+    Buffer.from(globalThis.crypto.getRandomValues(array)).toString("base64"),
+  );
+
+  return string.slice(0, 128);
+};
