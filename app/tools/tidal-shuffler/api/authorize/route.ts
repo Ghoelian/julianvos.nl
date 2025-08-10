@@ -26,6 +26,7 @@ export const GET = async (request: NextRequest): Promise<NextResponse> => {
   return NextResponse.json({
     loginUrl: `https://login.tidal.com/authorize?${queryParams.toString()}`,
     oauthCodeChallenge: codeChallengeSha256,
+    oauthCodeChallengeVerifier: codeChallenge,
     state: state,
   });
 };

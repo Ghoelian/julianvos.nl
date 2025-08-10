@@ -16,7 +16,7 @@ const TidalCallback = () => {
     const savedState = localStorage.getItem("tidalOauthState");
 
     if (state !== savedState || code === null) {
-      // localStorage.clear();
+      localStorage.clear();
       redirect("/tools/tidal-shuffler");
     } else {
       localStorage.setItem("tidalOauthCode", code);

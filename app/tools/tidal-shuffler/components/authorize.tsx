@@ -16,6 +16,11 @@ const Authorize = () => {
       loginDetails.oauthCodeChallenge,
     );
 
+    localStorage.setItem(
+      "tidalOauthCodeChallengeVerifier",
+      loginDetails.oauthCodeChallengeVerifier,
+    );
+
     localStorage.setItem("tidalOauthState", loginDetails.state);
 
     window.open(loginDetails.loginUrl, "_self");
