@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { ReactNode, StrictMode } from "react";
+import { ReactNode, StrictMode, Suspense } from "react";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import { ThemeProvider } from "@mui/material/styles";
 import theme from "@/common/theme";
 import AppBar from "@/common/components/nav/app-bar";
-import { Box, CssBaseline, Toolbar } from "@mui/material";
+import { Box, CircularProgress, CssBaseline, Toolbar } from "@mui/material";
 import Footer from "@/common/components/footer/footer";
 import Breadcrumbs from "@/common/components/breadcrumbs/breadcrumbs";
 
@@ -54,7 +54,9 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
                         <Breadcrumbs />
 
                         <Box component="main" sx={{ pt: 2 }}>
-                          {children}
+                          <Suspense fallback={<CircularProgress />}>
+                            {children}
+                          </Suspense>
                         </Box>
                       </Box>
                     </Box>
