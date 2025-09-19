@@ -4,11 +4,13 @@ const nextConfig: import("next").NextConfig = {
     return [
       {
         source: '/.well-known/matrix',
-        destination: 'https://matrix.julianvos.nl/.well-known/matrix'
+        destination: 'https://matrix.julianvos.nl/.well-known/matrix',
+        basePath: false
       },
       {
         source: '/.well-known/matrix/:slug',
-        destination: 'https://matrix.julianvos.nl/.well-known/matrix/:slug'
+        destination: 'https://matrix.julianvos.nl/.well-known/matrix/:slug',
+        basePath: false
       }
     ];
   },
