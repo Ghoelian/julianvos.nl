@@ -1,12 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig: import("next").NextConfig = {
-  async redirects() {
+  async rewrites() {
     return [
       {
-        source: "/.well-known/matrix/:path*",
-        destination: "https://matrix.julianvos.nl/.well-known/matrix/:path*",
-        permanent: false,
+        source: '/.well-known/matrix',
+        destination: 'https://matrix.julianvos.nl/.well-known/matrix'
       },
+      {
+        source: '/.well-known/matrix/:slug',
+        destination: 'https://matrix.julianvos.nl/.well-known/matrix/:slug'
+      }
     ];
   },
 };
