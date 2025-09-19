@@ -5,12 +5,14 @@ const nextConfig: import("next").NextConfig = {
       {
         source: '/.well-known/matrix',
         destination: 'https://matrix.julianvos.nl/.well-known/matrix',
-        basePath: false
+        basePath: false,
+        trailingSlash: true
       },
       {
         source: '/.well-known/matrix/:slug',
         destination: 'https://matrix.julianvos.nl/.well-known/matrix/:slug',
-        basePath: false
+        basePath: false,
+        trailingSlash: true
       }
     ];
   },
