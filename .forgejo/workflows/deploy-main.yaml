@@ -9,7 +9,7 @@ jobs:
 
     steps:
       - name: Deploy main
-        uses: latzo/ssh-action
+        uses: latzo/ssh-action@v1
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
