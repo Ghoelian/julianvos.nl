@@ -15,7 +15,10 @@
     --background-colour: #1e1e1e;
 }
 
-html {
+html, body {
+    height: 100%;
+    margin: 0;
+
     background-color: black;
     color: white;
 
@@ -42,20 +45,9 @@ a:visited:hover {
     filter: saturate(50%);
 }
 
-.content, .breadcrumbs {
+main, header {
     max-width: 850px;
 
     margin-left: auto;
     margin-right: auto;
-}
-
-.breadcrumb {
-    margin: 1.5rem;
-
-    width: 100%;
-    width: -moz-available;
-    width: -webkit-fill-available;
-    width: stretch;
-
-    color: var(--secondary-colour);
 }
