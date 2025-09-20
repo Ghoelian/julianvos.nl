@@ -1,0 +1,81 @@
+@font-face {
+    font-family: 'Roboto Mono';
+
+    src: url('/assets/fonts/RobotoMono-Regular.eot');
+    src: url('/assets/fonts/RobotoMono-Regular.eot?#iefix') format('embedded-opentype'),
+    url('/assets/fonts/RobotoMono-Regular.woff2') format('woff2'),
+    url('/assets/fonts/RobotoMono-Regular.woff') format('woff'),
+    url('/assets/fonts/RobotoMono-Regular.ttf') format('truetype'),
+    url('/assets/fonts/RobotoMono-Regular.svg#RobotoMono-Regular') format('svg');
+}
+
+:root {
+    --primary-colour: #5ab53f;
+    --secondary-colour: #d377f0;
+}
+
+html {
+    background-color: black;
+    color: white;
+
+    font-family: 'Roboto Mono', monospace;
+}
+
+ul {
+    list-style-type: "- ";
+}
+
+a {
+    color: var(--primary-colour);
+}
+
+a:visited {
+    color: var(--secondary-colour);
+}
+
+a:hover {
+    filter: brightness(150%);
+}
+
+a:visited:hover {
+    filter: saturate(50%);
+}
+
+.content, .breadcrumbs {
+    max-width: 850px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.card, .breadcrumb {
+    margin: 1.5rem;
+
+    width: 100%;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    width: stretch;
+}
+
+.breadcrumb {
+    color: var(--secondary-colour);
+}
+
+.card {
+    background-color: #1e1e1e;
+    padding: 0.5rem 1.5rem;
+
+    border-radius: 4px;
+}
+
+.card-body {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.card-title {
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 32px;
+}
