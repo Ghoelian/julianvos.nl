@@ -1,12 +1,12 @@
 @font-face {
-    font-family: 'Cascadia Mono';
+    font-family: 'Roboto Mono';
 
-    src: url('/assets/fonts/CascadiaMono/CascadiaMono-Regular.eot');
-    src: url('/assets/fonts/CascadiaMono/CascadiaMono-Regular.eot?#iefix') format('embedded-opentype'),
-    url('/assets/fonts/CascadiaMono/CascadiaMono-Regular.woff2') format('woff2'),
-    url('/assets/fonts/CascadiaMono/CascadiaMono-Regular.woff') format('woff'),
-    url('/assets/fonts/CascadiaMono/CascadiaMono-Variable.ttf') format('truetype'),
-    url('/assets/fonts/CascadiaMono/CascadiaMono-Regular.svg#CascadiaMono-Regular') format('svg');
+    src: url('/assets/fonts/RobotoMono-Regular.eot');
+    src: url('/assets/fonts/RobotoMono-Regular.eot?#iefix') format('embedded-opentype'),
+    url('/assets/fonts/RobotoMono-Regular.woff2') format('woff2'),
+    url('/assets/fonts/RobotoMono-Regular.woff') format('woff'),
+    url('/assets/fonts/RobotoMono-Regular.ttf') format('truetype'),
+    url('/assets/fonts/RobotoMono-Regular.svg#RobotoMono-Regular') format('svg');
 }
 
 :root {
@@ -19,7 +19,7 @@ html {
     background-color: black;
     color: white;
 
-    font-family: 'Cascadia Mono', monospace;
+    font-family: 'Roboto Mono', monospace;
 }
 
 ul {
