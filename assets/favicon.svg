@@ -1,0 +1,11 @@
+<svg id="emoji" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+    <style>
+        text {
+            font-size: 64px;
+            text-anchor: middle;
+            dominant-baseline: central;
+        }
+    </style>
+
+    <text x="50%" y="50%">🦊</text>
+</svg>
