@@ -6,7 +6,7 @@
     width: -webkit-fill-available;
     width: stretch;
 
-    background-color: #1e1e1e;
+    background-color: var(--background-colour);
     padding: 0.5rem 1.5rem;
 
     border-radius: 4px;

@@ -12,6 +12,7 @@
 :root {
     --primary-colour: #5ab53f;
     --secondary-colour: #d377f0;
+    --background-colour: #1e1e1e;
 }
 
 html {
