@@ -9,10 +9,10 @@ footer {
     padding: 8px;
 }
 
-footer > div:not(:last-child) {
+.footer-item:not(:last-child) {
     flex-grow: 1;
 }
 
-footer > div:last-child {
+.footer-item:last-child {
     text-align: right;
 }
