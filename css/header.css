@@ -1,0 +1,28 @@
+header {
+    max-width: 850px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+header > div {
+    margin: 1.5rem;
+
+    width: 100%;
+    width: -moz-available;
+    width: -webkit-fill-available;
+    width: stretch;
+
+    color: var(--secondary-colour);
+}
+
+.arguments > a {
+    color: var(--primary-colour);
+}
+
+.arguments > a:not(:hover) {
+    filter: saturate(50%);
+
+    text-decoration: none;
+}
