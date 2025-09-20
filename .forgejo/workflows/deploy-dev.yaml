@@ -1,0 +1,19 @@
+on:
+  push:
+    branches:
+      - dev
+
+jobs:
+  deploy-dev:
+    runs-on: debian-latest
+
+    steps:
+      - name: Deploy dev
+        uses: latzo/ssh-action
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: ${{ secrets.PORT }}
+          script: |
+            deploy-dev
