@@ -1,0 +1,18 @@
+footer {
+    background-color: var(--background-colour);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: initial;
+    gap: 16px;
+    padding: 8px;
+}
+
+.footer-item:not(:last-child) {
+    flex-grow: 1;
+}
+
+.footer-item:last-child {
+    text-align: right;
+}
