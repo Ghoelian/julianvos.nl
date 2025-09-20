@@ -12,7 +12,7 @@ import StyledNextLink from "@/common/components/styled-next-link";
 // lmao this is so dumb
 const age = DateTime.local(2000, 12, 25).diffNow("years");
 
-export default function Home() {
+const Home = () => {
   return (
     <>
       <Box
@@ -246,4 +246,6 @@ export default function Home() {
       </Box>
     </>
   );
-}
+};
+
+export default Home;
