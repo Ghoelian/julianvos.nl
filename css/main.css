@@ -10,17 +10,19 @@
 }
 
 :root {
-    --primary-colour: #5ab53f;
-    --secondary-colour: #d377f0;
-    --background-colour: #1e1e1e;
+    --primary-colour: #d33682;
+    --secondary-colour: #6c71c4;
+    --background-colour: light-dark(#eee8d5, #073642);
+
+    color-scheme: light dark;
 }
 
 html, body {
     height: 100%;
     margin: 0;
 
-    background-color: black;
-    color: white;
+    background-color: light-dark(#fdf6e3, #002b36);
+    color: light-dark(#586e75, #93a1a1);
 
     font-family: 'Roboto Mono', monospace;
 }
@@ -42,7 +44,7 @@ a:hover {
 }
 
 a:visited:hover {
-    filter: saturate(50%);
+    filter: brightness(150%);
 }
 
 main {

@@ -25,7 +25,7 @@ header {
 }
 
 .arguments > a:not(:hover) {
-    filter: brightness(50%);
+    filter: brightness(75%);
 
     text-decoration: none;
 }
