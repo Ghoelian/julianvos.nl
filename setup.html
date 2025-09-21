@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+
+    <title>/home/julianv/projects</title>
+
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml"/>
+
+    <link rel="stylesheet" href="/css/normalize.css"/>
+    <link rel="stylesheet" href="/css/main.css"/>
+    <link rel="stylesheet" href="/css/header.css"/>
+    <link rel="stylesheet" href="/css/footer.css"/>
+    <link rel="stylesheet" href="/css/card.css"/>
+</head>
+
+<body>
+<header>
+    <div class="header-content">/home/julianv $ <span class="command">cd</span> <span class="arguments"><a
+            href="/">~/</a> <a href="/experience">~/experience</a> <a href="/projects">~/projects</a> <a href="/setup"
+                                                                                                         class="header-active">~/setup</a></span>
+    </div>
+</header>
+
+<main>
+    <div class="card">
+        <div class="card-content">
+            <p>
+                Apart from the things below which I'm hosting locally, I also have a few things hosted at OVH and
+                Hetzner until I can build a better and more reliable home server.
+            </p>
+
+            <p>
+                One of the things running in the cloud is a Matrix server. I use some Mautrix bridges to bridge
+                Whatsapp, Signal, and Discord to Matrix. You can reach me on Matrix at <a href="https://matrix.to/#/@julian:julianvos.nl">@julian:julianvos.nl</a>.
+            </p>
+
+            <p>
+                I also have a small VPS hosting this website. It's behind Cloudflare, and because this website is only
+                static assets, it should be cached completely causing minimal traffic to the actual VPS. We'll see how
+                that works out.
+            </p>
+        </div>
+    </div>
+
+    <div class="card">
+        <h1 class="card-title">Media server</h1>
+
+        <div class="card-content">
+            <p>
+                My media server is an old PC I bought around 2016. It was a pre-built, but I upgraded the PSU and GPU
+                over time.
+            </p>
+
+            <p>
+                Overall, it's pretty shitty and already was when I bought it. The ram is perpetually at 98%
+                usage, one of the disks just increased its error count to 1147, and the entire thing reboots when I try
+                to use the GPU for transcoding. I plan to replace it as soon as possible.
+            </p>
+
+            <p>
+                It runs TrueNAS Scale. It's mainly used as a media server.
+            </p>
+
+            <h2>Specs</h2>
+            <ul>
+                <li>AMD FX-8350</li>
+                <li>Nvidia GTX 1050 Ti</li>
+                <li>8GB DDR3 RAM</li>
+                <li>2 * 8TB WD HDD</li>
+                <li>1 * 1TB Samsung EVO SSD</li>
+            </ul>
+
+            <h2>Software stack</h2>
+            <dl>
+                <dt>Jellyfin</dt>
+                <dd>for watching movies and TV shows</dd>
+
+                <dt>Sonarr, Radarr, and Lidarr</dt>
+                <dd>for managing and organizing my media library</dd>
+
+                <dt>Navidrome</dt>
+                <dd>for streaming my music</dd>
+
+                <dt>Immich</dt>
+                <dd>for handling my photo collection</dd>
+
+                <dt>Nextcloud</dt>
+                <dd>for general file storage and document editing</dd>
+            </dl>
+        </div>
+    </div>
+
+    <div class="card">
+        <h1 class="card-title">PC</h1>
+
+        <div class="card-content">
+            <p>
+                My home PC is mainly used for gaming and some light programming. It has the following specs:
+            </p>
+            <ul>
+                <li>AMD Ryzen 5 5600x</li>
+                <li>Nvidia RTX 3080</li>
+                <li>32GB DDR4 RAM</li>
+                <li>2 * 2TB Samsung EVO M.2 SSD</li>
+            </ul>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-item">
+        Contact<br/>
+        <a href="mailto:post@julianvos.nl">post@julianvos.nl</a>
+    </div>
+
+    <div class="footer-item">
+        <a href="https://codeberg.org/Ghoelian" target="_blank" rel="noreferrer noopener">Codeberg</a>
+
+        <a href="https://codeberg.org/Ghoelian/julianvos.nl" target="_blank" rel="noreferrer noopener">Source code</a>
+    </div>
+
+    <div class="footer-item">
+        <div>© 2025</div>
+        <div>Julian Vos</div>
+    </div>
+</footer>
+</body>
+</html>
