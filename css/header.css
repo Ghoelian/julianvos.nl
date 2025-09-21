@@ -9,7 +9,6 @@ header {
     margin-right: auto;
 }
 
-
 .header-content {
     margin: 1.5rem;
 
@@ -26,7 +25,11 @@ header {
 }
 
 .arguments > a:not(:hover) {
-    filter: saturate(50%);
+    filter: brightness(50%);
 
     text-decoration: none;
+}
+
+.header-active:not(:hover) {
+    filter: none !important;
 }
