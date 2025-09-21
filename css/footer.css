@@ -29,7 +29,7 @@ footer {
     flex-grow: 1;
 }
 
-.footer-item:not(:first-child), .footer-item:not(:last-child) {
+.footer-item:not(:first-child, :last-child) {
     text-align: center;
 }
 
