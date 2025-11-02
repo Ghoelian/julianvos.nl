@@ -1,0 +1,27 @@
+{
+    "cc.etke.synapse-admin": {
+        "asManagedUsers": [
+            "^@discordbot:julianvos\\.nl$",
+            "^@discord_[0-9]+:julianvos\\.nl$",
+            "^@signalbot:julianvos\\.nl$",
+            "^@signal_[a-zA-Z0-9]+:julianvos\\.nl$",
+            "^@slackbot:julianvos\\.nl$",
+            "^@slack_[a-zA-Z0-9\\-]+:julianvos\\.nl$",
+            "^@whatsappbot:julianvos\\.nl$",
+            "^@whatsapp_[0-9]+:julianvos\\.nl$"
+        ],
+        "corsCredentials": "same-origin",
+        "externalAuthProvider": false,
+        "menu": [],
+        "restrictBaseUrl": "https://matrix.julianvos.nl"
+    },
+    "m.homeserver": {
+        "base_url": "https://matrix.julianvos.nl"
+    },
+    "org.matrix.msc4143.rtc_foci": [
+        {
+            "livekit_service_url": "https://matrix.julianvos.nl/livekit-jwt-service",
+            "type": "livekit"
+        }
+    ]
+}
