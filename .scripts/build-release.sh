@@ -7,6 +7,16 @@ pushd "$SCRIPT_DIR" || exit 1
 
 pushd ".."
 
+mkdir -p "./.well-known"
+
+rm "./.well-known/matrix/client"
+rm "./.well-known/matrix/server"
+rm "./.well-known/matrix/support"
+
+curl "https://matrix.julianvos.nl/.well-known/matrix/client" -o "./.well-known/matrix/client"
+curl "https://matrix.julianvos.nl/.well-known/matrix/server" -o "./.well-known/matrix/server"
+curl "https://matrix.julianvos.nl/.well-known/matrix/support" -o "./.well-known/matrix/support"
+
 mkdir -p "./.out"
 
 EXCLUDE=$(xargs -a .gitignore -I{} -d'\n' echo --exclude {})
