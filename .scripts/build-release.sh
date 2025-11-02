@@ -23,6 +23,6 @@ EXCLUDE=$(xargs -a .gitignore -I{} -d'\n' echo --exclude {})
 
 # We want EXCLUDE to be treated as arguments.
 # shellcheck disable=SC2086
-tar $EXCLUDE --exclude .gitignore --exclude .forgejo -czvf "./.out/$BRANCH.tar.gz" ./
+tar $EXCLUDE --exclude .git --exclude .gitignore --exclude .forgejo --exclude .scripts -czvf "./.out/$BRANCH.tar.gz" ./
 
 popd || exit 1
